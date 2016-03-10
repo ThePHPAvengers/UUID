@@ -4,13 +4,6 @@ Create PSR-0/4 compliant packages and projects easily with this skeleton
 
 Comes pre configured to work with phpunit out the box
 
-Simple-tastic 3 Step Installation
-
-Open a Terminal. Download the repo with git clone https://github.com/jasdeepkhalsa/phpunit-skeleton.git
-cd into where you downloaded your repo and run php composer.phar self-update
-Now, run php composer.phar install --dev
-Note: php refers to the location of your php executable, if its not on your system's path
-
 Run PHPUnit
 
 Open a Terminal
