@@ -1,5 +1,7 @@
 # package-skeleton
 
+[![Build Status](https://travis-ci.org/jkirkby91/package-skeleton.svg?branch=master)](https://travis-ci.org/jkirkby91/package-skeleton)
+
 A php PSR-0/4 compliant skeleton package, pre-configured with phpunit + coverage
 
 Comes pre configured with phpunit and travis ci out the box
