@@ -1,12 +1,12 @@
 {
-  "name": "jkirkby/package-skeleton",
+  "name": "AUTHOR/PACKAGE-NAME",
   "type": "library",
-  "description": "A php PSR-0/4 compliant skeleton package, pre-configured with phpunit + coverage",
-  "keywords": [ "php","package","psr-0","psr-4","skeleton","package skeleton","phpunit" ],
-  "homepage": "https://github.com/jkirkby91/package-skeleton",
+  "description": "",
+  "keywords": [ "" ],
+  "homepage": "",
   "license": "MIT",
   "authors": [
-    { "name": "James Kirkby", "email": "jkirkby91@gmail.com" }
+    { "name": "", "email": "" }
   ],
   "require": {
     "php": ">=5.5.0"
@@ -16,16 +16,15 @@
     "phpunit/dbunit": ">=1.2",
     "phpunit/php-invoker": "^1.1",
     "phpunit/test-listener-xhprof": "dev-master",
-    "vladahejda/phpunit-assert-exception": "^1.0",
     "lox/xhprof": "dev-master@dev",
     "raveren/kint": "^1.0"
   },
   "autoload": {
     "psr-4": {
-      "APPNameSpace\\": "lib"
+      "APP\\": "lib"
     },
     "psr-0": {
-      "APPNameSpace": "lib"
+      "APP": "lib"
     }
   },
   "scripts": {
@@ -44,19 +43,24 @@
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
     ],
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ],
     "build-live-project": [
       "@composerTimeout",
       "@composerInstallLive",
       "@npmInstall",
       "@bowerInstall",
-      "@gulpBuild"
+      "@gulpBuild",
+      "@artisanMigrate"
     ],
     "build-dev-project": [
       "@composerTimeout",
       "@composerInstallDev",
       "@npmInstall",
       "@bowerInstall",
-      "@gulpBuild"
+      "@gulpBuild",
+      "@artisanMigrate"
     ],
     "composerTimeout": "composer config process-timeout 4000",
     "composerInstallLive": "composer install --prefer-dist --no-dev",
