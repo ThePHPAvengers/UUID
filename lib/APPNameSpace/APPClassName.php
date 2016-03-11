@@ -1,8 +1,8 @@
 <?php
 
-    namespace APPNameSpace;
+    namespace AppNameSpace;
 
-    class APPClassName
+    class AppClassName
     {
         public function true()
         {

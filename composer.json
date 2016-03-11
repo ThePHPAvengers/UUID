@@ -22,10 +22,10 @@
   },
   "autoload": {
     "psr-4": {
-      "APPNameSpace\\": "lib"
+      "AppNameSpace\\": "lib"
     },
     "psr-0": {
-      "APPNameSpace": "lib"
+      "AppNameSpace": "lib"
     }
   },
   "scripts": {
