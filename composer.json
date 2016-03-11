@@ -36,6 +36,9 @@
     "pu-c": [
       "./vendor/bin/phpunit --coverage-html coverage"
     ],
+    "codeClimate": [
+      "phpunit --coverage-clover build/logs/clover.xml"
+    ],
     "gaa": [
       "git add --all"
     ],

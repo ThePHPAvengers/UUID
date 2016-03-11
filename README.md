@@ -1,6 +1,6 @@
 # package-skeleton
 
-[![Build Status](https://travis-ci.org/jkirkby91/package-skeleton.svg?branch=master)](https://travis-ci.org/jkirkby91/package-skeleton)
+[![Build Status](https://travis-ci.org/jkirkby91/package-skeleton.svg?branch=master)](https://travis-ci.org/jkirkby91/package-skeleton) [![Test Coverage](https://codeclimate.com/github/jkirkby91/package-skeleton/badges/coverage.svg)](https://codeclimate.com/github/jkirkby91/package-skeleton/coverage) [![Code Climate](https://codeclimate.com/github/jkirkby91/package-skeleton/badges/gpa.svg)](https://codeclimate.com/github/jkirkby91/package-skeleton)
 
 A php PSR-0/4 compliant skeleton package, pre-configured with phpunit + coverage
 

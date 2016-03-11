@@ -4,3 +4,4 @@ composer.lock
 coverage
 phpunit.xml
 .idea/
+build
