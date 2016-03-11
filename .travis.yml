@@ -6,3 +6,4 @@ before_script:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
 script: composer codeClimate
+after_script: ./codeclimate.sh
