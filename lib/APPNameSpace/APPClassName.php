@@ -4,8 +4,13 @@
 
     class APPClassName
     {
-        public function func()
+        public function true()
         {
             return true;
+        }
+
+        public function null()
+        {
+            return null;
         }
     }

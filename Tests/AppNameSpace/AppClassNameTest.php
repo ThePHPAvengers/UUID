@@ -22,9 +22,17 @@
         /**
          * @test
          */
-        function testFunc()
+        function truetest()
         {
-            $this->assertTrue($this->obj->func());
+            $this->assertTrue($this->obj->true());
+        }
+
+        /**
+         * @test
+         */
+        function nulltest()
+        {
+            $this->assertNull($this->obj->null());
         }
     }
  
