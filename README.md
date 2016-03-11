@@ -14,11 +14,12 @@ Comes pre configured with phpunit and travis ci out the box
 
 Next you need to rename your package namespaces
     lib/AppNameSpace to lib/YourApp
-    lib/AppNameSpace/AppclassName to lib/YourApp/YourClassName
+    lib/AppNameSpace/AppClassName to lib/YourApp/YourClassName
 
 Then the same with the test directory. These namespaces need to match but appending 'Test' to the name
+
     Tests/AppNameSpaceTest to Tests/YourAppTest
-    Tests/AppNameSpace/AppclassNameTest to Tests/YourApp/YourClassNameTest
+    Tests/AppNameSpace/AppClassNameTest to Tests/YourApp/YourClassNameTest
 
 # PHPunit tests
 
@@ -40,15 +41,11 @@ runs the $ git add --all command
     $ composer pu
 runs a standard phpunit test
 
-    $ composer pu-coverage
+    $ composer pu-c
 runs a phpunit test with coverage
 
 
 and you will see the outcome of your tests
-
-to run tests with code coverage run
-
-composer pu-coverage
 
 # Composer setup
 
