@@ -1,17 +1,48 @@
 # package-skeleton
 
-Create PSR-0/4 compliant packages and projects easily with this skeleton
+A php PSR-0/4 compliant skeleton package, pre-configured with phpunit + coverage
 
-Comes pre configured to work with phpunit out the box
+Comes pre configured with phpunit and travis ci out the box
 
-Run PHPUnit
+# Install
 
-Open a Terminal
-cd to your project root
+    $ git clone git@github.com:jkirkby91/package-skeleton.git .
+    $ rm -Rf .git
+    $ rm composer.json
+    $ mv composer.json.dist composer.json
+    $ git init
 
-run
+Next you need to rename your package namespaces
+    lib/AppNameSpace to lib/YourApp
+    lib/AppNameSpace/AppclassName to lib/YourApp/YourClassName
 
-$ composer pu
+Then the same with the test directory. These namespaces need to match but appending 'Test' to the name
+    Tests/AppNameSpaceTest to Tests/YourAppTest
+    Tests/AppNameSpace/AppclassNameTest to Tests/YourApp/YourClassNameTest
+
+# PHPunit tests
+
+To run php unit tests
+
+    $ phpunit
+
+To run php unit tests with coverage
+
+    $ phpunit --coverage-html coverage
+
+# Composer Scripts
+
+To help with mundane tasks, there are some pre-configured composer scripts to speed up repetative tasks
+
+    $ composer gaa
+runs the $ git add --all command
+
+    $ composer pu
+runs a standard phpunit test
+
+    $ composer pu-coverage
+runs a phpunit test with coverage
+
 
 and you will see the outcome of your tests
 
@@ -19,60 +50,20 @@ to run tests with code coverage run
 
 composer pu-coverage
 
-You should see something like...
+# Composer setup
 
-    PHPUnit 3.7.19 by Sebastian Bergmann.
+Dont forget to setup your composer file other wise installs wont work
 
-    Configuration read from /(directory)/phpunit-skeleton/phpunit.xml
-
-    ....
-
-    Time: 0 seconds, Memory: 3.00Mb
-
-    OK (4 tests, 4 assertions)
-
-
-We included some pre-configured composer scripts to ease mundane/repetitive tasks
-
-Customizing package Skeleton
-
-Once you've successfully installed package Skeleton, you'll probably want to customize it to your application.
-
-How do I change the name of the application?
-
-Once you have the name of your application which we shall refer to as YourApp, then do the following:
-
-First you have to change the entry Application in the composer.json file to YourApp under the object psr-0:
-
-  "require-dev": {
-    "phpunit/phpunit": "^4.7",
-    "phpunit/dbunit": ">=1.2",
-    "phpunit/php-invoker": "^1.1",
-    "phpunit/test-listener-xhprof": "dev-master",
-    "lox/xhprof": "dev-master@dev",
-    "raveren/kint": "^1.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "APP\\": "lib"
-    },
-    "psr-0": {
-      "APP": "lib"
-    }
-  },
-
-Next, rename the following two directories from APPNameSpace to YourApp:
-
-Rename /lib/APPNameSpace/ to /lib/YourApp/
-Rename /tests/APPNameSpace/ to /tests/YourApp/
-
-Finally update the namespace inside the following php files:
-
-Inside /lib/YourApp/Example.php update namespace Application; to namespace YourApp;
-Inside /tests/YourApp/ExampleTest.php update $this->obj = new Application\Example; to $this->obj = new YourApp\Example;
-
-Run php composer update again to update the sources
-Run pu again to make sure all tests are passing again
+    {
+      "name": "AUTHOR/PACKAGE-NAME",
+      "type": "library",
+      "description": "",
+      "keywords": [ "" ],
+      "homepage": "",
+      "license": "MIT",
+      "authors": [
+        { "name": "", "email": "" }
+      ],
 
 Email: jkirkby91 {at} gmail {dot} com
 Twitter: @jkirkby91
