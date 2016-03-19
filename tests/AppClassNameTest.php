@@ -1,14 +1,20 @@
 <?php
 
-    class AppClassNameTest extends PHPUnit_Framework_TestCase {
+    namespace AppNameSpace;
+
+    use AppNameSpace;
+
+    /**
+     * Class AppClassNameTest
+     *
+     * @package AppNameSpace
+     */
+    class AppClassNameTest extends \PHPUnit_Framework_TestCase {
 
         protected $obj = NULL;
 
-        /**
-         * Set up test
-         */
         protected function setUp() {
-            $this->obj = new AppNameSpace\AppClassName;
+            $this->obj = new AppClassName;
         }
 
         /**
@@ -16,7 +22,7 @@
          */
         public function testClassIs()
         {
-            $this->assertInstanceOf(get_class($this->obj),new AppNameSpace\AppClassName);
+            $this->assertInstanceOf(get_class($this->obj),new AppClassName);
         }
 
         /**

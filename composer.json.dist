@@ -8,25 +8,33 @@
   "authors": [
     { "name": "", "email": "" }
   ],
+  ],
   "require": {
-    "php": ">=5.5.0"
+    "php": ">=5.5.0",
+    "vlucas/phpdotenv": "~2.2"
   },
   "require-dev": {
-     "codeclimate/php-test-reporter": "dev-master",
+    "raveren/kint": "^1.0",
     "phpunit/phpunit": "^4.7",
     "phpunit/dbunit": ">=1.2",
+    "behat/behat": "dev-master",
+    "phpmd/phpmd": "dev-master",
+    "phploc/phploc": "dev-master",
     "phpunit/php-invoker": "^1.1",
-    "phpunit/test-listener-xhprof": "dev-master",
-    "vladahejda/phpunit-assert-exception": "^1.0",
     "lox/xhprof": "dev-master@dev",
-    "raveren/kint": "^1.0"
+    "sebastian/phpcpd": "dev-master",
+    "sebastian/phpdcd": "dev-master",
+    "squizlabs/php_codesniffer": "dev-master",
+    "phpunit/test-listener-xhprof": "dev-master",
+    "codeclimate/php-test-reporter": "dev-master",
+    "vladahejda/phpunit-assert-exception": "^1.0"
   },
   "autoload": {
     "psr-4": {
-      "AppNameSpace\\": "src"
-    },
-    "psr-0": {
-      "AppNameSpace": "src"
+      "AppNameSpace\\": [
+        "src",
+        "tests"
+      ]
     }
   },
   "scripts": {
@@ -35,6 +43,15 @@
     ],
     "pu-c": [
       "./vendor/bin/phpunit --coverage-html coverage"
+    ],
+    "codeSniff": [
+    "phpcs src/*"
+    ],
+    "codeSniffFixer": [
+      "phpcbf src/*"
+    ],
+    "codeClimate": [
+      "phpunit --coverage-clover build/logs/clover.xml"
     ],
     "gaa": [
       "git add --all"
@@ -47,24 +64,15 @@
     ],
     "build-live-project": [
       "@composerTimeout",
-      "@composerInstallLive",
-      "@npmInstall",
-      "@bowerInstall",
-      "@gulpBuild"
+      "@composerInstallLive"
     ],
     "build-dev-project": [
       "@composerTimeout",
-      "@composerInstallDev",
-      "@npmInstall",
-      "@bowerInstall",
-      "@gulpBuild"
+      "@composerInstallDev"
     ],
     "composerTimeout": "composer config process-timeout 4000",
     "composerInstallLive": "composer install --prefer-dist --no-dev",
     "composerInstallDev": "composer install",
-    "npmInstall": "npm install -y",
-    "bowerInstall": "bower install --allow-root",
-    "gulpBuild": "gulp build",
     "gp": "git pull origin master"
   }
 }
