@@ -1,5 +1,5 @@
 {
-  "name": "ThePHPAvengers/UUID",
+  "name": "the-php-avengers/uuid",
   "type": "library",
   "description": "A library to generate UUIDS",
   "keywords": [ "UUID"],
