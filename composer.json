@@ -1,5 +1,5 @@
 {
-  "name": "jkirkby/package-skeleton",
+  "name": "ThePHPAvengers/UUID",
   "type": "library",
   "description": "A php PSR-2/4 compliant skeleton package, pre-configured with phpunit + coverage/Scrutinizer",
   "keywords": [ "php","package","psr-2","psr-4","skeleton","package skeleton","phpunit" ],
@@ -30,7 +30,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AppNameSpace\\": [
+      "ThePHPAvengers\\UniversallyUniqueID\\": [
         "src",
         "tests"
       ]
