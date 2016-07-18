@@ -1,0 +1,77 @@
+{
+  "name": "AUTHOR/PACKAGE-NAME",
+  "type": "library",
+  "description": "",
+  "keywords": [ "" ],
+  "homepage": "",
+  "license": "MIT",
+  "authors": [
+    { "name": "", "email": "" }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "vlucas/phpdotenv": "~2.2"
+  },
+  "require-dev": {
+    "raveren/kint": "^1.0",
+    "phpunit/phpunit": "^4.7",
+    "phpunit/dbunit": ">=1.2",
+    "behat/behat": "dev-master",
+    "phpmd/phpmd": "dev-master",
+    "phploc/phploc": "dev-master",
+    "phpunit/php-invoker": "^1.1",
+    "lox/xhprof": "dev-master@dev",
+    "sebastian/phpcpd": "dev-master",
+    "sebastian/phpdcd": "dev-master",
+    "squizlabs/php_codesniffer": "dev-master",
+    "phpunit/test-listener-xhprof": "dev-master",
+    "codeclimate/php-test-reporter": "dev-master",
+    "vladahejda/phpunit-assert-exception": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AppNameSpace\\": [
+        "src",
+        "tests"
+      ]
+    }
+  },
+  "scripts": {
+    "pu": [
+      "./vendor/bin/phpunit"
+    ],
+    "pu-c": [
+      "./vendor/bin/phpunit --coverage-html coverage"
+    ],
+    "codeSniff": [
+    "phpcs src/*"
+    ],
+    "codeSniffFixer": [
+      "phpcbf src/*"
+    ],
+    "codeClimate": [
+      "phpunit --coverage-clover build/logs/clover.xml"
+    ],
+    "gaa": [
+      "git add --all"
+    ],
+    "gpom": [
+      "@gp"
+    ],
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "build-live-project": [
+      "@composerTimeout",
+      "@composerInstallLive"
+    ],
+    "build-dev-project": [
+      "@composerTimeout",
+      "@composerInstallDev"
+    ],
+    "composerTimeout": "composer config process-timeout 4000",
+    "composerInstallLive": "composer install --prefer-dist --no-dev",
+    "composerInstallDev": "composer install",
+    "gp": "git pull origin master"
+  }
+}
