@@ -9,8 +9,7 @@
     { "name": "James Kirkby", "email": "jkirkby91@gmail.com" }
   ],
   "require": {
-    "php": ">=5.5.0",
-    "vlucas/phpdotenv": "~2.2"
+    "php": ">=5.5.0"
   },
   "require-dev": {
     "raveren/kint": "^1.0",
